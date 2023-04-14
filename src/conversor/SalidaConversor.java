@@ -42,8 +42,12 @@ public class SalidaConversor {
                     resultado2 = tasa.OperacionConvertirDeDolares(modenaDestinoString,cantidadIngresadaDouble);
                 }
 
-                if (monedaOrigen.equals("euros")){
-                    resultado2 = tasa.OperacionConvertirDeEuros(modenaDestinoString,cantidadIngresadaDouble);
+                if (monedaOrigen.equals("yen japones")){
+                    resultado2 = tasa.OperacionConvertirDeYen(modenaDestinoString,cantidadIngresadaDouble);
+                }
+
+                if (monedaOrigen.equals("libra esterlina")){
+                    resultado2 = tasa.OperacionConvertirDeLibras(modenaDestinoString,cantidadIngresadaDouble);
                 }
 
                 int option = JOptionPane.showOptionDialog(null, "El resultado de convertir "+cantidadIngresada +" "+monedaOrigen +" a "+monedaDestino+" es : \n" + resultado2 + " " +monedaDestino + "\n\n¿Desea cerrar el programa o volver a ejecutar?", "Confirmar", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Cerrar", "Convertir otra moneda"}, "Cerrar");
